@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Landing Page</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>CLICK COUNTER WITH FORM</h1>
+        
+
+        <!-- Dark Mode Toggle -->
+        <button id="themeBtn">🌙 Dark Mode</button>
+
+        <!-- Click Counter -->
+        <div class="card">
+            <h2>Click Counter</h2>
+            <h3 id="count">0</h3>
+
+            <button id="increaseBtn">Click Me</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+
+        <!-- Form Validation -->
+        <div class="card">
+            <h2>Contact Form</h2>
+
+            <form id="contactForm">
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                >
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mission & Code Challenge</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body{
+        background:#0f172a;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        color:white;
+    }
+
+    /* Fade In Animation */
+    .card{
+        width:400px;
+        background:#1e293b;
+        border-radius:12px;
+        padding:20px;
+        box-shadow:0 0 20px rgba(0,0,0,0.3);
+        animation:fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn{
+        from{
+            opacity:0;
+            transform:translateY(20px);
+        }
+        to{
+            opacity:1;
+            transform:translateY(0);
+        }
+    }
+
+    h2{
+        margin-bottom:10px;
+    }
+
+    p{
+        color:#cbd5e1;
+        margin-bottom:15px;
+    }
+
+    .btn{
+        padding:10px 18px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+        background:#10b981;
+        color:white;
+        font-size:16px;
+        transition:all 0.3s ease;
+    }
+
+    /* Toggle Color */
+    .btn.active{
+        background:#ef4444;
+    }
+
+    /* Expand / Collapse Section */
+    .details{
+        max-height:0;
+        overflow:hidden;
+        transition:max-height 0.4s ease;
+        margin-top:15px;
+        background:#334155;
+        border-radius:8px;
+        padding:0 15px;
+    }
+
+    .details.show{
+        max-height:200px;
+        padding:15px;
+    }
+
+    .details ul{
+        padding-left:18px;
+    }
+
+    .details li{
+        margin:8px 0;
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h2>STUDENT DETAILS</h2>
+    <p>Click the button below to view details</p>
+
+    <button class="btn" id="toggleBtn">
+        Show Details
+    </button>
+
+    <div class="details" id="details">
+        <ul>
+            <li>NAME:PRATYUSH SHARMA</li>
+            <li>BRANCH:BTECH</li>
+            <li>SECTION:E</li>
+            <li>CGPA:9.54</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    const btn = document.getElementById("toggleBtn");
+    const details = document.getElementById("details");
+
+    btn.addEventListener("click", () => {
+        details.classList.toggle("show");
+        btn.classList.toggle("active");
+
+        if(details.classList.contains("show")){
+            btn.textContent = "Hide Details";
+        } else {
+            btn.textContent = "Show Details";
+        }
+    });
+</script>
+
+</body>
+</html>

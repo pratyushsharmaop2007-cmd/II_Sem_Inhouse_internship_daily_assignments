@@ -1,0 +1,71 @@
+body{
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+/* Navbar */
+
+.navbar-brand{
+    font-size:28px;
+}
+
+/* Hero Image */
+
+img{
+    transition:.4s;
+}
+
+img:hover{
+    transform:scale(1.03);
+}
+
+/* Feature Cards */
+
+.feature-card{
+    border:none;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,.2)!important;
+}
+
+/* Team Cards */
+
+.card{
+    border:none;
+    border-radius:15px;
+}
+
+.card img{
+    height:280px;
+    object-fit:cover;
+}
+
+/* Buttons */
+
+.btn{
+    border-radius:30px;
+    padding:10px 25px;
+}
+
+/* Contact Form */
+
+.form-control{
+    border-radius:10px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero{
+    text-align:center;
+}
+
+.navbar-nav{
+    text-align:center;
+}
+
+}
